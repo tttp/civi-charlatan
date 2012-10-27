@@ -1,7 +1,7 @@
 #Imaginary friends on CiviCRM#
 
 
-You have installed civicrm, but realised you don't have friends or contacts? Fed up of having activities with the same 102 contacts that ship by default with civi?
+You have installed [civicrm](http://www.civicrm.org), but realised you don't have friends or contacts? Fed up of having activities with the same 102 contacts that ship by default with civi?
 
 civi-charlatan is going to fill your social life with lots of interesting sounding contacts from all around the word. You will even have their emails, addresses and phones!
 
@@ -11,11 +11,18 @@ That or you want more realistic development enviroments containing a few 1000th 
 
 Testing with node on the same laptop as civi, generates 2000 individuals (+their employees) in less than 3 min. Hopefully, it will help testing and identifying sql in civicrm that needs some improvements.
 
+I plan to use it as well for our next trainings.
+
+It's using [charlatan](https://npmjs.org/package/charlatan) to generate the names/emails/phones
+
 ##Installation##
 you need to have a working node with npm
 
-download civi-charlatan
-npm install
+download civi-charlatan from https://github.com/tttp/civi-charlatan/zipball/master and unzip it or go the git way
+$git clone https://github.com/tttp/civi-charlatan.git
+
+and install its dependencies 
+$cd civi-charlatan; npm install
 
 ##Configuration##
 You need to set up your civicrm to accept REST. The usual setup:
@@ -61,3 +68,4 @@ Extend to generate other entities (events, participants, activities, contributio
 
 Put a limit on the maximum of parallel requests? Works fine enough on nginx.
 
+If there is a need, I could add a webinterface instead of config files

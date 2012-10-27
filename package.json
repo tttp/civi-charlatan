@@ -1,5 +1,6 @@
 {
   "name": "civi-charlatan",
+  "version" : "1.0.0",
   "dependencies": {
     "civicrm": ">=1.0.5",
     "charlatan": ">=0.1.1"
