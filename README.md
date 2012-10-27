@@ -9,11 +9,11 @@ It's like buying followers on twitter or "like" on facebook, but even better, it
  
 That or you want more realistic development enviroments containing a few 1000th contacts. This tool generates contacts (with address, email and phone) and add them to your civicrm (using REST API).
 
-Testing with node on the same laptop as civi, generates 2000 individuals (+their employees) in less than 3 min. Hopefully, it will help testing and identifying sql in civicrm that needs some improvements.
+Testing with node on the same laptop as my civi, generated 2000 individuals (+their employees) in less than 3 min. Hopefully, it will help testing and identifying sql queries in civicrm that needs some improvements.
 
-I plan to use it as well for our next trainings.
+I plan to use it as well for our next trainings to provide a more complete install.
 
-It's using [charlatan](https://npmjs.org/package/charlatan) to generate the names/emails/phones
+It's using the wonderful [charlatan](https://npmjs.org/package/charlatan) to generate the names/emails/phones
 
 ##Installation##
 you need to have a working node with npm
@@ -63,9 +63,9 @@ To make it easier to clean your db if needed, the source of these contacts is "i
 - Generate more relationships between individuals (happily distribute love and marry our imaginary friends)
 - shared addresses
 - households
+- Extend to generate other entities (events, participants, activities, contributions, members...)
+- Put a limit on the maximum of parallel requests? Works fine enough on nginx.
 
-Extend to generate other entities (events, participants, activities, contributions, members...)
+If there is a need, I could add a webinterface instead of config files (fill an issue)
 
-Put a limit on the maximum of parallel requests? Works fine enough on nginx.
-
-If there is a need, I could add a webinterface instead of config files
+And more importantly, thanking all the fantastic contributors that are going to pull request with the above mentionned improvements, or something completely different. Yes, I mean you.
