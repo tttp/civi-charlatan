@@ -11,14 +11,26 @@ if (argv.length < 3) {
     process.exit(1);
 }
 
-var data = fs.readFileSync ("config/" + argv[2] + ".json", 'utf8');
-var api = crmAPI (JSON.parse(data));
+var config = fs.readFileSync ("config/" + argv[2] + ".json", 'utf8');
+var api = crmAPI (JSON.parse(config));
 
+api.get("Contact",0,function(data) {
+  if (!data.is_error) {
+    console.log ("Connection OK. Bringing "+ argv[3] +" imaginary friends to the party!"),
+    generateContacts(argv[3]);
+  } else {
+    console.log ("invalid server, check the params");
+    console.log (config);
+  }
+});
+
+
+var generateContacts = function (total) {
 
 //var locale = ['en-us','en-gb','de','nl','pt-br'];
 var locale = ['en-us','en-gb','de','nl'];
 var length = locale.length;
-for (var i=0;i< argv[3];i++) { 
+for (var i=0;i< total;i++) { 
 //for (var i=0;i<1;i++) { 
   var lang = locale[Math.floor(Math.random()*locale.length)];
   Charlatan.setLocale(lang);
@@ -28,7 +40,7 @@ for (var i=0;i< argv[3];i++) {
   var param = {
     'contact_type' : 'Individual',
     'preferred_language': lang,
-    'source':'charlatan',
+    'source':'imaginary friend',
     'first_name'    : Charlatan.Name.firstName(),
     'last_name'    : Charlatan.Name.lastName(),
     'job_title': Charlatan.Name.title(),
@@ -57,6 +69,6 @@ for (var i=0;i< argv[3];i++) {
     }
   });
 //  console.log (param);
-
+}
 }
 

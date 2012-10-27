@@ -44,4 +44,7 @@ Ashly Emard verla@distinctio.name 0800 794 4163
 Amber Effertz aisha_lockman@nesciunt.com  0800 475 3134
 ...
 
-To make it easier to clean if needed, the source is "charlatan". 
+
+Testing with node on the same laptop as civi, generates 2000 individuals (+their employees) in less than 3 min.
+
+To make it easier to clean if needed, the source is "imaginary friend". 
