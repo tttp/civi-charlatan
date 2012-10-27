@@ -1,14 +1,17 @@
-This generates contacts (with address, email and phone) and add them to your civicrm install over REST
+#Imaginary friends on CiviCRM#
 
-You have a civicrm, but don't have friends or contacts? fed up of having activities with the same 102 contacts that ship by default with civi?
+
+You have installed civicrm, but realised you don't have friends or contacts? Fed up of having activities with the same 102 contacts that ship by default with civi?
 
 civi-charlatan is going to fill your social life with lots of interesting sounding contacts from all around the word. You will even have their emails, addresses and phones!
 
 It's like buying followers on twitter or "like" on facebook, but even better, it's free.
  
-That or you want more realistic development enviroments containing a few 1000th contacts.
+That or you want more realistic development enviroments containing a few 1000th contacts. This tool generates contacts (with address, email and phone) and add them to your civicrm (using REST API).
 
-###Installation###
+Testing with node on the same laptop as civi, generates 2000 individuals (+their employees) in less than 3 min. Hopefully, it will help testing and identifying sql in civicrm that needs some improvements.
+
+##Installation##
 you need to have a working node with npm
 
 download civi-charlatan
@@ -36,15 +39,25 @@ will create 42 contacts in the site defined into config/example.json
 I used the german, uk, us and nl locale (randomly) to have fields with chars outside of a-z and see if unicode is with us all the way. You will have names with quotes too (o' ...)
 
 ex:
-Adela Ebert conn_phd@sit.com  0151 435 9957
-Constantin Goedicke christiano_rabenstein_von@velit.de  +49-2384-28111896
-Viktor Freigang rania@quia.org  +49-962-9540190
-Collin Erdman georgiana.weimann@assumenda.biz 0118 262 1969
-Ashly Emard verla@distinctio.name 0800 794 4163
-Amber Effertz aisha_lockman@nesciunt.com  0800 475 3134
+- Adela Ebert conn_phd@sit.com  0151 435 9957
+- Constantin Goedicke christiano_rabenstein_von@velit.de  +49-2384-28111896
+- Viktor Freigang rania@quia.org  +49-962-9540190
+- Collin Erdman georgiana.weimann@assumenda.biz 0118 262 1969
+- Ashly Emard verla@distinctio.name 0800 794 4163
+- Amber Effertz aisha_lockman@nesciunt.com  0800 475 3134
 ...
 
 
-Testing with node on the same laptop as civi, generates 2000 individuals (+their employees) in less than 3 min.
+To make it easier to clean your db if needed, the source of these contacts is "imaginary friend". 
 
-To make it easier to clean if needed, the source is "imaginary friend". 
+##TODO##
+
+- Modify so contacts have one or several emails, phones and addresses
+- Generate more relationships between individuals (happily distribute love and marry our imaginary friends)
+- shared addresses
+- households
+
+Extend to generate other entities (events, participants, activities, contributions, members...)
+
+Put a limit on the maximum of parallel requests? Works fine enough on nginx.
+
