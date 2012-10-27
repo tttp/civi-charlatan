@@ -19,28 +19,28 @@ It's using the wonderful [charlatan](https://npmjs.org/package/charlatan) to gen
 you need to have a working node with npm
 
 download civi-charlatan from https://github.com/tttp/civi-charlatan/zipball/master and unzip it or go the git way
-$git clone https://github.com/tttp/civi-charlatan.git
+> $git clone https://github.com/tttp/civi-charlatan.git
 
 and install its dependencies 
-$cd civi-charlatan; npm install
+> $cd civi-charlatan; npm install
 
 ##Configuration##
 You need to set up your civicrm to accept REST. The usual setup:
 - be sure you have an site key in your site civicrm.settings.php (it should be there already)
 - you need a user (that is going to be the creator of the contacts) that have a api_key
 connect to your civicrm database
-mysql> update civicrm_contact set api_key="aaaa" where id=1;
+> mysql> update civicrm_contact set api_key="aaaa" where id=1;
+
 or whatever user id you have
 
-If your civicrm version is < 4.2.5,  you need to apply this patch
-http://issues.civicrm.org/jira/browse/CRM-11169
+If your civicrm version is < 4.2.5,  you need to apply [this patch](http://issues.civicrm.org/jira/browse/CRM-11169)
 
 you then need to copy (or edit) the config file config/example.json
 and put the url of your site, the api key and (site) key.
 
 ##Usage##
 
-$node fill.js example 42
+> $node contact.js example 42
 
 will create 42 contacts in the site defined into config/example.json
 I used the german, uk, us and nl locale (randomly) to have fields with chars outside of a-z and see if unicode is with us all the way. You will have names with quotes too (o' ...)
