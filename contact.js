@@ -14,7 +14,7 @@ if (argv.length < 3) {
 var config = fs.readFileSync ("config/" + argv[2] + ".json", 'utf8');
 var api = crmAPI (JSON.parse(config));
 
-api.get("Contact",0,function(data) {
+api.get("Contact",0,function(data) { //fetching contact id=0. Either an error or empty result
   if (!data.is_error) {
     console.log ("Connection OK. Bringing "+ argv[3] +" imaginary friends to the party!"),
     generateContacts(argv[3]);
@@ -40,7 +40,6 @@ var generateContacts = function (total) {
       employer = Charlatan.Company.name();
     }
 
-      //'debug':1,
     var param = {
       'contact_type' : 'Individual',
       'preferred_language': lang,
