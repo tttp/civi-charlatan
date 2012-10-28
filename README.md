@@ -7,18 +7,18 @@ civi-charlatan is going to fill your social life with lots of interesting soundi
 
 It's like buying followers on twitter or "like" on facebook, but even better, it's free.
  
-That or you want more realistic development enviroments containing a few 1000th contacts. This tool generates contacts (with address, email and phone) and add them to your civicrm (using REST API).
+That, or you want more realistic development environments containing a few 1000 contacts. This tool generates contacts (with address, email and phone) and add them to your civicrm (using REST API). It will also create highly successful organisations that your friends work for. 
 
-Testing with node on the same laptop as my civi, generated 2000 individuals (+their employees) in less than 3 min. Hopefully, it will help testing and identifying sql queries in civicrm that needs some improvements.
+Testing with node on the same laptop as my civi install, it generates around 1000 individuals (+their employees) per minute. Hopefully, it will help testing and identifying sql queries in civicrm that needs some improvements.
 
-I plan to use it as well for our next trainings to provide a more complete install.
+I plan to use it as well for our next trainings to provide a more realistic environment.
 
 It's using the wonderful [charlatan](https://npmjs.org/package/charlatan) to generate the names/emails/phones
 
 ##Installation##
 you need to have a working node with npm
 
-download civi-charlatan from https://github.com/tttp/civi-charlatan/zipball/master and unzip it or go the git way
+[download civi-charlatan](https://github.com/tttp/civi-charlatan/zipball/master) and unzip it or go the git way
 > $git clone https://github.com/tttp/civi-charlatan.git
 
 and install its dependencies 
