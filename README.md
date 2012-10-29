@@ -57,6 +57,14 @@ ex:
 
 To make it easier to clean your db if needed, the source of these contacts is "imaginary friend". 
 
+##TESTING##
+You can test the speed of an action using 
+> $node test/hammer.js example 100
+
+This will emulate 100 autocomplete. So if searching for "xavi", it will do a search for "x", one for "xa", one for "xav" and one for "xavi". 
+It randomly fetch contacts and the queries are on existing names, emails or first names
+
+
 ##TODO##
 
 - Modify so contacts have one or several emails, phones and addresses
