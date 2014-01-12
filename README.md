@@ -3,7 +3,7 @@
 
 You have installed [civicrm](http://www.civicrm.org), but realised you don't have friends or contacts? Fed up of having activities with the same 102 contacts that ship by default with civi?
 
-civi-charlatan is going to fill your social life with lots of interesting sounding contacts from all around the word. You will even have their emails, addresses and phones!
+civi-charlatan is going to fill your social life with lots of interesting sounding contacts from all around the world. You will even have their emails, addresses and phones!
 
 It's like buying followers on twitter or "like" on facebook, but even better, it's free.
  
@@ -64,6 +64,8 @@ You can test the speed of an action using
 This will emulate 100 autocomplete. So if searching for "xavi", it will do a search for "x", one for "xa", one for "xav" and one for "xavi". 
 It randomly fetch contacts and the queries are on existing names, emails or first names
 
+## speed and concurrency ##
+I did manage to create some db deadlocks when trying to create too many contacts at the same time. Concurrency is hard, I avoided the problem by limitting the number of requests run at the same time
 
 ##TODO##
 
@@ -72,7 +74,6 @@ It randomly fetch contacts and the queries are on existing names, emails or firs
 - shared addresses
 - households
 - Extend to generate other entities (events, participants, activities, contributions, members...)
-- Put a limit on the maximum of parallel requests? Works fine enough on nginx.
 
 If there is a need, I could add a webinterface instead of config files (fill an issue)
 
